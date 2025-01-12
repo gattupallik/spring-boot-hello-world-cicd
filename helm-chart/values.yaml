@@ -1,0 +1,7 @@
+replicaCount: 1
+image:
+  repository: your-dockerhub-username/spring-boot-hello-world
+  tag: latest
+service:
+  type: ClusterIP
+  port: 80

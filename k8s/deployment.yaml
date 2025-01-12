@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-hello-world
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-boot-hello-world
+  template:
+    metadata:
+      labels:
+        app: spring-boot-hello-world
+    spec:
+      containers:
+      - name: spring-boot-hello-world
+        image: gattupallik/demo-springboot:latest
+        ports:
+        - containerPort: 8080
+
